@@ -6,12 +6,12 @@ import { Jobs } from './components/data';
 import './App.css'
 
 function App() {
-  const [work, setWork] = useState(Jobs);
+  const [works, setWorks] = useState(Jobs);
 
   return (
     <div className="App">
       <Header />
-      <Joblisting work={work} />
+      <Joblisting works={works} />
     </div>
   )
 }
