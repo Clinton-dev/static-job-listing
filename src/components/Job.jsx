@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 function Job({ work }) {
     return (
-        <div className='w-full border rounded-md mb-8 bg-white p-4 drop-shadow-xl'>
+        <div className='w-full border relative rounded-md mb-14 bg-white p-4 drop-shadow-xl'>
+            {/* company logo */}
+            <div className='absolute -top-8 left-6'>
+                <img className="h-16 w-16 rounded-full" src={work.logo} alt="company logo" />
+            </div>
             {/* company details */}
             <div className="company-info flex space-x-6 items-end mt-6">
                 <p className='text-DesDarkCyan font-bold'>{work.company}</p>
