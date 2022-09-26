@@ -10,8 +10,8 @@ function Job({ work }) {
             {/* desktop layout */}
             <div className='flex justify-between'>
                 {/* left section desktop layout */}
-                <div className='flex space-x-2 items-center'>
-                    <img className="h-16 w-16 rounded-full hidden md:block" src={work.logo} alt="company logo" />
+                <div className='flex space-x-4 items-center'>
+                    <img className="h-16 w-16 rounded-full hidden md:block md:h-24 md:w-24" src={work.logo} alt="company logo" />
                     <div >
                         {/* company details */}
                         <div className="company-info flex space-x-6 items-end mt-6">
@@ -39,7 +39,7 @@ function Job({ work }) {
                 <div className="tags pt-4 hidden space-x-6 text-DesDarkCyan font-bold items-baseline md:flex">
                     {work.languages.map((lang) => {
                         return (
-                            <div className='bg-LightGrayCyanFb p-1.5 rounded'>
+                            <div className='bg-LightGrayCyanFb p-1.5 rounded md:p-2'>
                                 {lang}
                             </div>
                         )
