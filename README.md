@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
+![](./screenshot.png)
+![](./screenshot-mobile.png)
 ### Links
 
 - Live Site URL: [live URL](https://jocular-muffin-d57f50.netlify.app/)
