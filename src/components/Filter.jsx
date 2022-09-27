@@ -9,7 +9,7 @@ function Filter({ setLanguage }) {
                 {/* language */}
                 <div className='flex bg-LightGrayCyanFb '>
                     <div className='text-DesDarkCyan p-2'>All</div>
-                    <button className='p-2 bg-DesDarkCyan hover:bg-VeryDarkGrayCyan'><img src="src/assets/images/close-icon.svg" alt="close icon" /></button>
+                    <button className='p-2 bg-DesDarkCyan hover:bg-VeryDarkGrayCyan'><img src="./assets/images/close-icon.svg" alt="close icon" /></button>
                 </div>
             </div>
             <div>
