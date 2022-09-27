@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
+import { motion, AnimatePresence } from "framer-motion";
 import Job from './Job';
 
-function Joblisting({ works, setFilteredWorks, language, setLanguage }) {
+function Joblisting({ works, filteredWorks, setFilteredWorks, language, setLanguage }) {
 
     useEffect(() => {
         if (language == "all") {
@@ -9,19 +10,21 @@ function Joblisting({ works, setFilteredWorks, language, setLanguage }) {
             return;
         }
 
-        let filtered = works.filter((work) => work.languages.includes(language));
+        let filtered = filteredWorks.filter((work) => work.languages.includes(language));
         setFilteredWorks(filtered)
 
     }, [language])
 
     return (
-        <div className='container w-5/6 flex flex-wrap mt-10 mx-auto'>
-            {works.map((work) => {
-                return (
-                    <Job work={work} key={work.id} setLanguage={setLanguage} />
-                )
-            })}
-        </div>
+        <AnimatePresence>
+            <motion.div layout className='container w-5/6 flex flex-wrap mt-10 mx-auto'>
+                {filteredWorks.map((work) => {
+                    return (
+                        <Job work={work} key={work.id} setLanguage={setLanguage} />
+                    )
+                })}
+            </motion.div>
+        </AnimatePresence>
     )
 }
 
