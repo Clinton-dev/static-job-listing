@@ -1,11 +1,11 @@
 .header {
-    background-image: url('../assets/images/bg-header-mobile.svg');
+    background-image: url('/bg-header-mobile.svg');
     min-height: 28vh;
 }
 
 @media only screen and (min-width: 600px) {
     .header {
-        background-image: url('../assets/images/bg-header-desktop.svg');
+        background-image: url('/bg-header-desktop.svg');
         min-height: 15.5vh;
         background-repeat: no-repeat;
         background-size: cover;
