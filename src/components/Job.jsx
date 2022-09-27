@@ -1,13 +1,14 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
-function Job({ work }) {
+function Job({ work, setLanguage }) {
     return (
-        <div className='w-full border relative rounded-md mb-14 bg-white p-4 drop-shadow-xl md:p-6 md:mb-6'>
+        <motion.div className='w-full border relative rounded-md mb-14 bg-white p-4 drop-shadow-xl md:p-6 md:mb-6' layout animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }}>
             {/* company logo mobile layout */}
             <div className='absolute -top-8 left-6 md:hidden'>
                 <img className="h-16 w-16 rounded-full" src={work.logo} alt="company logo" />
             </div>
-            {/* desktop layout */}
+            {/* md and up layout */}
             <div className='flex justify-between'>
                 {/* left section desktop layout */}
                 <div className='flex space-x-4 items-center'>
@@ -39,9 +40,9 @@ function Job({ work }) {
                 <div className="tags pt-4 hidden space-x-6 text-DesDarkCyan font-bold items-baseline md:flex">
                     {work.languages.map((lang) => {
                         return (
-                            <div className='bg-LightGrayCyanFb p-1.5 rounded md:p-2'>
+                            <button className='bg-LightGrayCyanFb p-1.5 rounded md:p-2' onClick={() => setLanguage(lang)}>
                                 {lang}
-                            </div>
+                            </button>
                         )
                     })}
                 </div>
@@ -50,13 +51,13 @@ function Job({ work }) {
             <div className="tags pt-4 flex space-x-6 border-t text-DesDarkCyan font-bold md:hidden">
                 {work.languages.map((lang) => {
                     return (
-                        <div className='bg-LightGrayCyanFb p-1.5 rounded'>
+                        <div className='bg-LightGrayCyanFb p-1.5 rounded' onClick={() => setLanguage(lang)}>
                             {lang}
                         </div>
                     )
                 })}
             </div>
-        </div>
+        </motion.div>
     )
 }
 
