@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-function Job({ work, setLanguage }) {
+function Job({ work, setLanguage, setFilteredLanguages }) {
     return (
         <motion.div className='w-full border relative rounded-md mb-14 bg-white p-4 drop-shadow-xl md:p-6 md:mb-6 hover:border-l-4 hover:border-l-DesDarkCyan' layout animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }}>
             {/* company logo mobile layout */}
@@ -40,7 +40,7 @@ function Job({ work, setLanguage }) {
                 <div className="tags pt-4 hidden space-x-6 text-DesDarkCyan font-bold items-baseline md:flex">
                     {work.languages.map((lang) => {
                         return (
-                            <button className='bg-LightGrayCyanFb p-1.5 rounded md:p-2 hover:text-white hover:bg-DesDarkCyan' onClick={() => setLanguage(lang)}>
+                            <button className='bg-LightGrayCyanFb p-1.5 rounded md:p-2 hover:text-white hover:bg-DesDarkCyan' onClick={() => setFilteredLanguages([lang])}>
                                 {lang}
                             </button>
                         )

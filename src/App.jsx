@@ -9,12 +9,13 @@ function App() {
   const [works, setWorks] = useState(Jobs);
   const [filteredWorks, setFilteredWorks] = useState(Jobs);
   const [language, setLanguage] = useState("all");
+  const [filteredLanguages, setFilteredLanguages] = useState([])
 
   return (
     <div className="App">
       <Header />
-      <Filter setLanguage={setLanguage} />
-      <Joblisting works={works} filteredWorks={filteredWorks} setFilteredWorks={setFilteredWorks} setLanguage={setLanguage} language={language} />
+      {!filteredLanguages.length == 0 && <Filter setFilteredLanguages={setFilteredLanguages} filteredLanguages={filteredLanguages} />}
+      <Joblisting works={works} filteredLanguages={filteredLanguages} setFilteredLanguages={setFilteredLanguages} filteredWorks={filteredWorks} setFilteredWorks={setFilteredWorks} setLanguage={setLanguage} language={language} />
     </div>
   )
 }
