@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 
-function Filter({ setLanguage }) {
+function Filter({ setFilteredLanguages }) {
 
     return (
         <div className='container w-5/6 mx-auto -mt-4 mb-12 bg-white rounded-md flex justify-between py-2 px-4 md:mb-0'>
@@ -13,7 +13,7 @@ function Filter({ setLanguage }) {
                 </div>
             </div>
             <div>
-                <button className='text-DesDarkCyan capitalize font-bold border-DesDarkCyan hover:border-b' onClick={() => setLanguage("all")}>clear</button>
+                <button className='text-DesDarkCyan capitalize font-bold border-DesDarkCyan hover:border-b' onClick={() => setFilteredLanguages([])}>clear</button>
             </div>
         </div>
     )
