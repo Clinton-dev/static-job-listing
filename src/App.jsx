@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {!filteredLanguages.length == 0 && <Filter setFilteredLanguages={setFilteredLanguages} />}
+      {!filteredLanguages.length == 0 && <Filter setFilteredLanguages={setFilteredLanguages} filteredLanguages={filteredLanguages} />}
       <Joblisting works={works} filteredLanguages={filteredLanguages} setFilteredLanguages={setFilteredLanguages} filteredWorks={filteredWorks} setFilteredWorks={setFilteredWorks} setLanguage={setLanguage} language={language} />
     </div>
   )
