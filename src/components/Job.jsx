@@ -48,7 +48,7 @@ function Job({ work, setLanguage, setFilteredLanguages }) {
                 </div>
             </div>
             {/* Job Tags mobile layout*/}
-            <div className="tags pt-4 hidden space-x-6 text-DesDarkCyan font-bold items-baseline md:flex">
+            <div className="tags pt-4 flex space-x-6 border-t text-DesDarkCyan font-bold md:hidden">
                 {work.languages.map((lang) => {
                     return (
                         <button className='bg-LightGrayCyanFb p-1.5 rounded md:p-2 hover:text-white hover:bg-DesDarkCyan' onClick={() => setFilteredLanguages([lang])}>

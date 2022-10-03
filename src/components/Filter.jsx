@@ -12,7 +12,7 @@ function Filter({ setFilteredLanguages, filteredLanguages }) {
                     return (
                         <div className='flex bg-LightGrayCyanFb '>
                             <div className='text-DesDarkCyan p-2'>{language}</div>
-                            <button className='p-2 bg-DesDarkCyan hover:bg-VeryDarkGrayCyan' onClick={(e) => setFilteredLanguages(filteredLanguages.filter(lang => lang != language))}><img src="src/assets/images/close-icon.svg" alt="close icon" /></button>
+                            <button className='p-2 bg-DesDarkCyan hover:bg-VeryDarkGrayCyan' onClick={(e) => setFilteredLanguages(filteredLanguages.filter(lang => lang != language))}><img src={closeIcon} alt="close icon" /></button>
                         </div>
                     )
                 })}
